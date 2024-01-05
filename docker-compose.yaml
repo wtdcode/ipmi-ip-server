@@ -2,6 +2,7 @@ services:
   web:
     build: .
     image: ipmi-ip-server
+    restart: always
     ports:
       - "8799:8799"
     devices:
