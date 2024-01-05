@@ -7,3 +7,10 @@ services:
       - "8799:8799"
     devices:
       - "/dev/ipmi0:/dev/ipmi0"
+  godns:
+    image: timothyye/godns
+    depends_on:
+      - web
+    restart: always
+    volumes:
+      - ./config.json:/config.json
