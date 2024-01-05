@@ -3,6 +3,6 @@ services:
     build: .
     image: ipmi-ip-server
     ports:
-      - "8756:8756"
+      - "8799:8799"
     devices:
       - "/dev/ipmi0:/dev/ipmi0"
