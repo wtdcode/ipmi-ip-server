@@ -5,7 +5,7 @@ import subprocess
 
 async def ip_handler(request: web.Request):
     try:
-        ipmi_output = subprocess.check_output(["ipmitool lan print".split(" ")])
+        ipmi_output = subprocess.check_output("ipmitool lan print".split(" "))
         matches = re.findall(r"IP Address\s*:\s*(((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4})", ipmi_output)
         return matches[0][0]
     except Exception:
