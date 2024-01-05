@@ -7,4 +7,4 @@ WORKDIR /app
 
 COPY server.py /app/
 
-CMD ["python3", "server.py", "--port", "8756"]
+CMD ["python3", "server.py", "--port", "8799"]
