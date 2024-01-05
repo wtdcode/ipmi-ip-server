@@ -1,6 +1,7 @@
 services:
   web:
     build: .
+    image: ipmi-ip-server
     ports:
       - "8756:8756"
     devices:
